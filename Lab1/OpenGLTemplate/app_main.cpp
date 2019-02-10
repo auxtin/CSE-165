@@ -57,79 +57,196 @@ void appDrawScene() {
 //    glEnd();
     
     //Axis Code
-    glColor3f(0.0, 0.0, 1.0);
+//    glColor3f(0.0, 0.0, 1.0);
+//
+//    glLineWidth(1);
+//
+//    glBegin(GL_LINES);
+//
+//    glVertex3f(-1.0, 0.0, 0.5);
+//    glVertex3f(1.0, 0.0, 0.5);
+//
+//    glVertex3f(0.0, 1.0, 0.5);
+//    glVertex3f(0.0, -1.0, 0.5);
+//
+//    glEnd();
     
-    glLineWidth(1);
+    //
+    //------------------------------------------------------------------------------
+    //holes in the letters
     
-    glBegin(GL_LINES);
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
     
-    glVertex3f(-1.0, 0.0, 0.5);
-    glVertex3f(1.0, 0.0, 0.5);
-    
-    glVertex3f(0.0, 1.0, 0.5);
-    glVertex3f(0.0, -1.0, 0.5);
+    //triangle in 'A'
+    glVertex3f(-.8125, .13, 0);
+    glVertex3f(-.84, .02, 0);
+    glVertex3f(-.7825, .02, 0);
     
     glEnd();
     
+    //rectangle in 'U'
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(-.385, .2, 0); //1
+    glVertex3f(-.385, -.16, 0); //2
+    glVertex3f(-.590, -.16, 0); //3
+    glVertex3f(-.590, .2, 0); //4
+    
+    glEnd();
+    
+    //top rectangle in 'S'
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(-.025, .17, 0); //1
+    glVertex3f(-.025, .015, 0); //2
+    glVertex3f(-.27, .015, 0); //3
+    glVertex3f(-.27, .17, 0); //4
+
+    
+    glEnd();
+    
+    //bottom rectangle in 'S'
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(-.3, -.015, 0); //1
+    glVertex3f(-.3, -.17, 0); //2
+    glVertex3f(-.055, -.17, 0); //3
+    glVertex3f(-.055, -.015, 0); //4
+    
+    glEnd();
+    
+    //left rectangle in 'T'
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(.025, .17, 0); //1
+    glVertex3f(.025, -.2, 0); //2
+    glVertex3f(.1425, -.2, 0); //3
+    glVertex3f(.1425, .17, 0); //4
+    
+    glEnd();
+    
+    //right rectangle in 'T'
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(.3, .17, 0); //1
+    glVertex3f(.3, -.2, 0); //2
+    glVertex3f(.1825, -.2, 0); //3
+    glVertex3f(.1825, .17, 0); //4
+    
+    glEnd();
+    
+    //left rectangle in 'I'
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(.35, .17, 0); //1
+    glVertex3f(.35, -.17, 0); //2
+    glVertex3f(.4725, -.17, 0); //3
+    glVertex3f(.4725, .17, 0); //4
+    
+    glEnd();
+    
+    //right rectangle in 'I'
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(.625, .17, 0); //1
+    glVertex3f(.625, -.17, 0); //2
+    glVertex3f(.505, -.17, 0); //3
+    glVertex3f(.505, .17, 0); //4
+    
+    glEnd();
+    
+    //left triangle in 'N'
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(.705,-.2, 0); //1
+    glVertex3f(.705, .145, 0); //2
+    glVertex3f(.92, -.2, 0); //3
+    
+    glEnd();
+    
+    //right triangle in 'N'
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(.705, .2, 0); //1
+    glVertex3f(.92, .2, 0); //2
+    glVertex3f(.92, -.145, 0); //3
+    
+    glEnd();
+    
+    
     //------------------------------------------------------------------------------
     //letter A
-    glColor3f(0, 1, 0);
+    //midpoint is .8125
+    glColor3f(0, 0, 1);
     
     glBegin(GL_POLYGON);
     
-    glVertex3f(-.95, -.2, 0);
-    glVertex3f(-.8125, .2, 0);
-//    glVertex3f(-.8125, .2, 0);
-    glVertex3f(-.675, -.2, 0);
+    glVertex3f(-.8125,.2,0); //7
+    glVertex3f(-.95, -.2, 0); //1
+    glVertex3f(-.92,-.2,0); //2
+    glVertex3f(-.855,-.02,0); //3
+    glVertex3f(-.765,-.02,0); //4
+    glVertex3f(-.71,-.2,0); //5
+    glVertex3f(-.675,-.2,0); //6
 
     glEnd();
 
     //letter U
-    glColor3f(0, 0, 1);
-    
-    glBegin(GL_POLYGON);
-    
-    glVertex3f(-.625, -.2, 0);
-    glVertex3f(-.35, -.2, 0);
-    glVertex3f(-.35, .2, 0);
-    glVertex3f(-.625, .2, 0);
-    
-    glEnd();
-
-    //letter S
     glColor3f(1, 0, 0);
     
     glBegin(GL_POLYGON);
     
-    glVertex3f(-.30, -.2, 0);
-    glVertex3f(-.025, -.2, 0);
-    glVertex3f(-.025, .2, 0);
-    glVertex3f(-.3, .2, 0);
+    glVertex3f(-.625, .2, 0); //1
+    glVertex3f(-.625, -.2, 0); //2
+    glVertex3f(-.35, -.2, 0); //3
+    glVertex3f(-.35, .2, 0); //4
+    
+    glEnd();
+
+    //letter S | bottom left ccw
+    glColor3f(1, 1, 0);
+    
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(-.30, -.2, 0); //1
+    glVertex3f(-.025, -.2, 0); //2
+    glVertex3f(-.025, .2, 0); //3
+    glVertex3f(-.3, .2, 0); //4
     
     glEnd();
     
-    //letter T
+    //letter T | midpoint is .1625
+    glColor3f(0, 0, 1 );
+    
+    glBegin(GL_POLYGON);
+    
+    glVertex3f(.025, -.2, 0); //1
+    glVertex3f(.3, -.2, 0); //2
+    glVertex3f(.3, .2, 0); //3
+    glVertex3f(.025, .2, 0); //4
+    
+    glEnd();
+    
+    //letter I | midpoint .4925
+    
     glColor3f(0, 1, 0);
     
     glBegin(GL_POLYGON);
     
-    glVertex3f(.025, -.2, 0);
-    glVertex3f(.3, -.2, 0);
-    glVertex3f(.3, .2, 0);
-    glVertex3f(.025, .2, 0);
-    
-    glEnd();
-    
-    //letter I
-    
-    glColor3f(0, 0, 1);
-    
-    glBegin(GL_POLYGON);
-    
+    glVertex3f(.35, .2, 0);
     glVertex3f(.35, -.2, 0);
     glVertex3f(.625, -.2, 0);
-    glVertex3f(.624, .2, 0);
-    glVertex3f(.35, .2, 0);
+    glVertex3f(.625, .2, 0);
     
     glEnd();
     
@@ -156,36 +273,36 @@ void appDrawScene() {
     
     glBegin(GL_LINES);
     
-    glVertex3f(-.95, -.2, 0); //A
-    glVertex3f(-.675, -.2, 0);
+//    glVertex3f(-.95, -.2, 0); //A
+//    glVertex3f(-.675, -.2, 0);
     
-    glVertex3f(-.625, -.2, 0); //U
-    glVertex3f(-.35, -.2, 0);
+//    glVertex3f(-.625, -.2, 0); //U
+//    glVertex3f(-.35, -.2, 0);
+
+//    glVertex3f(-.30, -.2, 0);//S
+//    glVertex3f(-.025, -.2, 0);
     
-    glVertex3f(-.30, -.2, 0);//S
-    glVertex3f(-.025, -.2, 0);
+//    glVertex3f(.025, -.2, 0);//T
+//    glVertex3f(.3, -.2, 0);
     
-    glVertex3f(.025, -.2, 0);//T
-    glVertex3f(.3, -.2, 0);
+//    glVertex3f(.35, -.2, 0);//I
+//    glVertex3f(.625, -.2, 0);
     
-    glVertex3f(.35, -.2, 0);//I
-    glVertex3f(.625, -.2, 0);
-    
-    glVertex3f(.675, -.2, 0);//N
-    glVertex3f(.95, -.2, 0);
+//    glVertex3f(.675, -.2, 0);//N
+//    glVertex3f(.95, -.2, 0);
 
     glEnd();
     
-    //let's make a guide for the height of my name denoted by this rectangle
-    glBegin(GL_POLYGON);
-    glColor3f(1, 1, 0); //yellow
-    
-    glVertex3f(.95, .2, 0);
-    glVertex3f(.95, -.2, 0);
-    glVertex3f(-.95, -.2, 0);
-    glVertex3f(-.95, .2, 0);
-
-    glEnd();
+//    //let's make a guide for the height of my name denoted by this rectangle
+//    glBegin(GL_POLYGON);
+//    glColor3f(1, 1, 0); //yellow
+//
+//    glVertex3f(.95, .2, 0);
+//    glVertex3f(.95, -.2, 0);
+//    glVertex3f(-.95, -.2, 0);
+//    glVertex3f(-.95, .2, 0);
+//
+//    glEnd();
     
     //
 //    glBegin(GL_POLYGON);
